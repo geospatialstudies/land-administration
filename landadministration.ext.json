@@ -1,0 +1,134 @@
+{
+	"type": "CityJSONExtension",
+	"name": "LandAdministration",
+	"uri": "https://www.someurl.org/demo.ext.json",
+	"version": "1.0",
+	"versionCityJSON": "2.0",
+	"description": "Extension to handle land administration practices",
+	"extraRootProperties": {},
+	"extraAttributes": {},
+	"extraCityObjects": {
+		"+Parcel": {
+			"allOf": [
+				{
+					"$ref": "cityobjects.schema.json#/_AbstractCityObject"
+				},
+				{
+					"properties": {
+						"type": {
+							"enum": [
+								"+Parcel"
+							]
+						},
+						"attributes": {
+							"type": "object",
+							"properties": {
+								"blockNumber": {
+									"type": "integer"
+								},
+								"journalNumber": {
+									"type": "integer"
+								},
+								"parcelDimension": {
+									"enum": [
+										"2D",
+										"3D"
+									]
+								},
+								"parcelID": {
+									"type": "integer"
+								},
+								"parcelLandUseType": {
+									"enum": [
+										"forest",
+										"industry",
+										"marine",
+										"mining",
+										"residential"
+									]
+								},
+								"parcelName": {
+									"type": "string"
+								},
+								"parcelNumber": {
+									"type": "integer"
+								},
+								"parcelOwner": {
+									"type": "string"
+								},
+								"parcelStructure": {
+									"enum": [
+										"single",
+										"part"
+										"multipart"
+										
+									]
+								},
+								"parcelType": {
+									"enum": [
+										"cadastre",
+										"zoning"
+																				
+									]
+								},
+								"registrationDate": {
+									"type": "string"
+								}
+							}
+						},
+						"geometry": {
+							"type": "array",
+							"items": {
+								"oneOf": [
+									{
+										"$ref": "geomprimitives.schema.json#/MultiLineString"
+									},
+									{
+										"$ref": "geomprimitives.schema.json#/MultiSurface"
+									},
+									{
+										"$ref": "geomprimitives.schema.json#/CompositeSurface"
+									},
+									{
+										"$ref": "geomprimitives.schema.json#/Solid"
+									},
+									{
+										"$ref": "geomprimitives.schema.json#/CompositeSolid"
+									},
+									{
+										"$ref": "geomprimitives.schema.json#/MultiSolid"
+									}
+								]
+							}
+						}
+					},
+					"required": [
+						"children",
+						"type",
+						"geometry"
+					]
+				}
+			]
+		}
+		
+		
+		
+		"+LABuilding": {
+    "allOf": [
+      { "$ref": "cityobjects.schema.json#/_AbstractBuilding" },
+      {
+        "properties": {
+          "type": { "enum": ["+LABuilding"] },
+          "attributes": {
+            "properties": {
+              "numberOfFloor": {"type": "number"}
+            }
+          }
+        },
+        "required": ["type"]
+      }
+    ]
+  }
+	},
+	"extraSemanticSurfaces": {}
+}
