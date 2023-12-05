@@ -178,7 +178,7 @@
                 }
             ]
         }
-    ,
+    },
 
     "+CondominiumUnit":
     {
@@ -703,8 +703,7 @@
                 ]
             }
         ]
-    }
-	},
+    },
 
     "extraSemanticSurfaces":
     {
