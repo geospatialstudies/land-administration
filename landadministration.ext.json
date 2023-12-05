@@ -2,11 +2,10 @@
 {
     "type": "CityJSONExtension",
     "name": "LandAdministration",
-    "uri": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/landadministration.ext.json",
+	"description": "Extension to handle 3D land administration practices",
+    "url": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/landadministration.ext.json",
     "version": "1.0",
     "versionCityJSON": "2.0",
-    "description": "Extension to handle 3D land administration practices",
-    "extraRootProperties": {},
     "extraAttributes": {},
     "extraCityObjects":
     {
@@ -705,7 +704,7 @@
     }
 	},
 
-    
+    "extraRootProperties": {},
 
     "extraSemanticSurfaces":
     {
