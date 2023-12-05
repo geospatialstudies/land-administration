@@ -178,8 +178,6 @@
                 }
             ]
         }
-    ,
-
     "+CondominiumUnit":
     {
         "allOf": [
@@ -705,6 +703,8 @@
         ]
     }
 	},
+
+    
 
     "extraSemanticSurfaces":
     {
