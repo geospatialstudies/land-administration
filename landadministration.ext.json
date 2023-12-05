@@ -1,7 +1,7 @@
 {
 	"type": "CityJSONExtension",
 	"name": "LandAdministration",
-	"uri": "https://www.someurl.org/demo.ext.json",
+	"uri": "https://raw.githubusercontent.com/geospatialstudies/land-administration/extension/landadministration.ext.json",
 	"version": "1.0",
 	"versionCityJSON": "2.0",
 	"description": "Extension to handle land administration practices",
