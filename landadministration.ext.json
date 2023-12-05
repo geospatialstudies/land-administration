@@ -177,7 +177,7 @@
                     ]
                 }
             ]
-        }
+        },
     "+CondominiumUnit":
     {
         "allOf": [
