@@ -31,11 +31,11 @@
                             {
                                 "blockNumber":
                                 {
-                                    "type": "integer"
+                                    "type": "number"
                                 },
                                 "journalNumber":
                                 {
-                                    "type": "integer"
+                                    "type": "number"
                                 },
                                 "parcelDimension":
                                 {
@@ -46,7 +46,7 @@
                                 },
                                 "parcelID":
                                 {
-                                    "type": "integer"
+                                    "type": "number"
                                 },
                                 "parcelLandUseType":
                                 {
@@ -64,7 +64,7 @@
                                 },
                                 "parcelNumber":
                                 {
-                                    "type": "integer"
+                                    "type": "number"
                                 },
                                 "parcelOwner":
                                 {
@@ -200,11 +200,11 @@
                         {
                             "dateOfSale":
                             {
-                                "type": "integer"
+                                "type": "number"
                             },
                             "marketValue":
                             {
-                                "type": "integer"
+                                "type": "number"
                             },
                             "name":
                             {
@@ -212,7 +212,7 @@
                             },
                             "unitID":
                             {
-                                "type": "integer"
+                                "type": "number"
                             }
 
                         }
@@ -274,23 +274,23 @@
                         {
                             "unitNumber":
                             {
-                                "type": "integer"
+                                "type": "number"
                             },
                             "numberOfBalcony":
                             {
-                                "type": "integer"
+                                "type": "number"
                             },
                             "numberOfLivingRoom":
                             {
-                                "type": "integer"
+                                "type": "number"
                             },
                             "numberOfOtherRoom":
                             {
-                                "type": "integer"
+                                "type": "number"
                             },
                             "mainUnitID":
                             {
-                                "type": "integer"
+                                "type": "number"
                             }
 
                         }
@@ -362,7 +362,7 @@
                             },
                             "sharedFacilityID":
                             {
-                                "type": "integer"
+                                "type": "number"
                             }
 
                         }
@@ -434,7 +434,7 @@
 
                             "relatedUnitNumber":
                             {
-                                "type": "integer"
+                                "type": "number"
                             },
                             "relatedUnitName":
                             {
@@ -442,7 +442,7 @@
                             },
                             "annexID":
                             {
-                                "type": "integer"
+                                "type": "number"
                             }
 
                         }
