@@ -169,15 +169,13 @@
                                 }
                             }
                         },
-                        
 
-                        
-
-                    "required": [
-                        "type"
-                    ]
+                        "required": [
+                            "type"
+                        ]
+                    }
                 }
-				} ]
+            ]
         },
 
         "+CondominiumUnit":
