@@ -2,7 +2,7 @@
 {
     "type": "CityJSONExtension",
     "name": "LandAdministration",
-    "uri": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/landadministration1ext.json",
+    "uri": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/landadministration.ext.json",
     "version": "1.0",
     "versionCityJSON": "2.0",
     "description": "Extension to handle 3D land administration practices",
@@ -130,7 +130,55 @@
             ]
         },
 
-        
+        "+LABuilding":
+        {
+            "allOf": [
+                {
+                    "$ref": "cityobjects.schema.json#/_AbstractBuilding"
+                },
+                {
+                    "properties":
+                    {
+                        "type":
+                        {
+                            "enum": ["+LABuilding"]
+                        },
+                        "attributes":
+                        {
+                            "properties":
+                            {
+                                "numberOfFloor":
+                                {
+                                    "type": "number"
+                                },
+                                "name":
+                                {
+                                    "type": "string"
+                                },
+                                "dateOfBuildingPermit":
+                                {
+                                    "type": "string"
+                                },
+                                "parcelID":
+                                {
+                                    "type": "number"
+                                },
+                                "building":
+                                {
+                                    "type": "number"
+                                }
+                            }
+                        }
+                    },
+
+                    "required": [
+                        "type",
+                        "geometry"
+                    ]
+                }
+            ]
+        },
+		
     "+CondominiumUnit":
     {
         "allOf": [
