@@ -191,9 +191,7 @@
                 {
                     "type":
                     {
-                        "enum": [
-                            "+CondominiumUnit"
-                        ]
+                        "enum": ["+CondominiumUnit"]
                     },
                     "attributes":
                     {
