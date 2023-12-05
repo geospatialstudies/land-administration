@@ -59,7 +59,7 @@
 								"parcelStructure": {
 									"enum": [
 										"single",
-										"part"
+										"part",
 										"multipart"
 										
 									]
