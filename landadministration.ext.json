@@ -173,8 +173,7 @@
                         
 
                     "required": [
-                        "type",
-                        "geometry"
+                        "type"
                     ]
                 }}
             ]
