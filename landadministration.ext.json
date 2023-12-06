@@ -346,7 +346,7 @@
                     "type":
                     {
                         "enum": [
-                            "+SharedFacility"
+                            "+MainUnit"
                         ]
                     },
                     "attributes":
@@ -650,7 +650,7 @@
                     "type":
                     {
                         "enum": [
-                            "+DepthLimitation"
+                            "+Easement"
                         ]
                     },
                     "attributes":
