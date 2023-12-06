@@ -488,19 +488,9 @@
                 ]
             }
         ]
-    }
-	
     },
-
-    
-
-    
-
-    
-
-    
-
-    "+Restriction":
+	
+	"+Restriction":
     {
         "allOf": [
             {
@@ -576,7 +566,19 @@
                 ]
             }
         ]
+    }
+	
     },
+
+    
+
+    
+
+    
+
+    
+
+    
 
     "+Easement":
     {
@@ -664,7 +666,7 @@
                     "type":
                     {
                         "enum": [
-                            "+Easement"
+                            "+DepthLimitation"
                         ]
                     },
                     "attributes":
@@ -679,7 +681,7 @@
                             },
                             "length":
                             {
-                                "type": "double"
+                                "type": "number"
                             }
 
                         }
