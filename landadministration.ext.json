@@ -1,10 +1,12 @@
+
 {
     "type": "CityJSONExtension",
     "name": "LandAdministration",
-	"description": "Extension to handle 3D land administration practices",
-    "url": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/landadministration.ext.json",
+    "uri": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/landadministration.ext.json",
     "version": "1.0",
     "versionCityJSON": "2.0",
+    "description": "Extension to handle 3D land administration practices",
+    "extraRootProperties": {},
     "extraAttributes": {},
     "extraCityObjects":
     {
@@ -30,11 +32,11 @@
                             {
                                 "blockNumber":
                                 {
-                                    "type": "number"
+                                    "type": "integer"
                                 },
                                 "journalNumber":
                                 {
-                                    "type": "number"
+                                    "type": "integer"
                                 },
                                 "parcelDimension":
                                 {
@@ -45,7 +47,7 @@
                                 },
                                 "parcelID":
                                 {
-                                    "type": "number"
+                                    "type": "integer"
                                 },
                                 "parcelLandUseType":
                                 {
@@ -63,7 +65,7 @@
                                 },
                                 "parcelNumber":
                                 {
-                                    "type": "number"
+                                    "type": "integer"
                                 },
                                 "parcelOwner":
                                 {
@@ -119,7 +121,11 @@
                             }
                         }
                     },
-                    "required": [ "type", "geometry" ]
+                    "required": [
+
+                        "type",
+                        "geometry"
+                    ]
                 }
             ]
         },
@@ -171,8 +177,9 @@
                     ]
                 }
             ]
-        },
-		
+        }
+    },
+
     "+CondominiumUnit":
     {
         "allOf": [
@@ -195,11 +202,11 @@
                         {
                             "dateOfSale":
                             {
-                                "type": "number"
+                                "type": "integer"
                             },
                             "marketValue":
                             {
-                                "type": "number"
+                                "type": "integer"
                             },
                             "name":
                             {
@@ -207,7 +214,7 @@
                             },
                             "unitID":
                             {
-                                "type": "number"
+                                "type": "integer"
                             }
 
                         }
@@ -269,23 +276,23 @@
                         {
                             "unitNumber":
                             {
-                                "type": "number"
+                                "type": "integer"
                             },
                             "numberOfBalcony":
                             {
-                                "type": "number"
+                                "type": "integer"
                             },
                             "numberOfLivingRoom":
                             {
-                                "type": "number"
+                                "type": "integer"
                             },
                             "numberOfOtherRoom":
                             {
-                                "type": "number"
+                                "type": "integer"
                             },
                             "mainUnitID":
                             {
-                                "type": "number"
+                                "type": "integer"
                             }
 
                         }
@@ -337,7 +344,7 @@
                     "type":
                     {
                         "enum": [
-                            "+SharedFacility"
+                            "+MainUnit"
                         ]
                     },
                     "attributes":
@@ -357,7 +364,7 @@
                             },
                             "sharedFacilityID":
                             {
-                                "type": "number"
+                                "type": "integer"
                             }
 
                         }
@@ -429,7 +436,7 @@
 
                             "relatedUnitNumber":
                             {
-                                "type": "number"
+                                "type": "integer"
                             },
                             "relatedUnitName":
                             {
@@ -437,7 +444,7 @@
                             },
                             "annexID":
                             {
-                                "type": "number"
+                                "type": "integer"
                             }
 
                         }
@@ -641,7 +648,7 @@
                     "type":
                     {
                         "enum": [
-                            "+DepthLimitation"
+                            "+Easement"
                         ]
                     },
                     "attributes":
@@ -696,10 +703,7 @@
                 ]
             }
         ]
-    }
-	},
-
-    "extraRootProperties": {},
+    },
 
     "extraSemanticSurfaces":
     {
