@@ -641,23 +641,9 @@
                 ]
             }
         ]
-    }
-	
     },
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    "+DepthLimitation":
+	
+	"+DepthLimitation":
     {
         "allOf": [
             {
@@ -724,7 +710,23 @@
                 ]
             }
         ]
+    }
+	
     },
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     "extraSemanticSurfaces":
     {
