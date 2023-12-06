@@ -772,7 +772,7 @@
             {
                 "type":
                 {
-                    "enum": ["+ColumSurface"]
+                    "enum": ["+ColumnSurface"]
                 }
 
             },
