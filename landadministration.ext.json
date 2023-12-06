@@ -253,12 +253,10 @@
                 ]
             }
         ]
-    }
     },
-
-    
-
-    "+MainUnit":
+	
+	
+	"+MainUnit":
     {
         "allOf": [
             {
@@ -707,7 +705,12 @@
                 ]
             }
         ]
+    }
     },
+
+    
+
+    
 
     "extraSemanticSurfaces":
     {
