@@ -177,10 +177,11 @@
                     ]
                 }
             ]
-        }
-    },
-
-    "+CondominiumUnit":
+        },
+		
+		
+		
+		"+CondominiumUnit":
     {
         "allOf": [
             {
@@ -253,6 +254,9 @@
             }
         ]
     },
+    },
+
+    
 
     "+MainUnit":
     {
