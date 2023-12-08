@@ -5,7 +5,15 @@
 	"description": "Extension to handle 3D land administration practices",
     "url": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/landadministration.ext.json",
     "version": "1.0",
-	"extraAttributes": {},
+	"extraAttributes": {
+		
+		"BuildingConstructiveElement":{
+			
+			"+function":{
+				"type": "string"
+			}
+		}
+	},
     "versionCityJSON": "2.0",
     
     "extraCityObjects":
