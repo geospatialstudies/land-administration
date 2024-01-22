@@ -3,7 +3,7 @@
     "type": "CityJSONExtension",
     "name": "3DLandAdministration",
 	"description": "Extension to handle 3D land administration practices",
-    "url": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/landadministration.ext.json",
+    "url": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/extension/landadministration.ext.json",
     "version": "1.0",
 	"extraAttributes": {
 		
