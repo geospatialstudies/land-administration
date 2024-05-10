@@ -2,20 +2,23 @@
 {
     "type": "CityJSONExtension",
     "name": "3DLandAdministration",
-	"description": "Extension to handle 3D land administration practices",
+    "description": "Extension to handle 3D land administration practices",
     "url": "https://raw.githubusercontent.com/geospatialstudies/land-administration/main/extension/landadministration.ext.json",
     "version": "1.0",
-	"extraAttributes": {
-		
-		"BuildingConstructiveElement":{
-			
-			"+function":{
-				"type": "string"
-			}
-		}
-	},
+    "extraAttributes":
+    {
+
+        "BuildingConstructiveElement":
+        {
+
+            "+function":
+            {
+                "type": "string"
+            }
+        }
+    },
     "versionCityJSON": "2.0",
-    
+
     "extraCityObjects":
     {
         "+Parcel":
@@ -186,545 +189,535 @@
                 }
             ]
         },
-		
-		
-		
-		"+CondominiumUnit":
-    {
-        "allOf": [
-            {
-                "$ref": "cityobjects.schema.json#/_AbstractCityObject"
-            },
-            {
-                "properties":
-                {
-                    "type":
-                    {
-                        "enum": [
-                            "+CondominiumUnit"
-                        ]
-                    },
-                    "attributes":
-                    {
-                        "type": "object",
-                        "properties":
-                        {
-                            "dateOfSale":
-                            {
-                                "type": "integer"
-                            },
-                            "marketValue":
-                            {
-                                "type": "integer"
-                            },
-                            "name":
-                            {
-                                "type": "string"
-                            },
-                            "unitID":
-                            {
-                                "type": "integer"
-                            }
 
-                        }
-                    },
-                    "geometry":
-                    {
-                        "type": "array",
-                        "items":
-                        {
-                            "oneOf": [
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/Solid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSolid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSolid"
-                                }
-                            ]
-                        }
-                    }
+        "+CondominiumUnit":
+        {
+            "allOf": [
+                {
+                    "$ref": "cityobjects.schema.json#/_AbstractCityObject"
                 },
-                "required": [
-
-                    "type",
-                    "geometry",
-                    "parents"
-                ]
-            }
-        ]
-    },
-	
-	
-	
-	"+MainUnit":
-    {
-        "allOf": [
-            {
-                "$ref": "cityobjects.schema.json#/_AbstractCityObject"
-            },
-            {
-                "properties":
                 {
-                    "type":
+                    "properties":
                     {
-                        "enum": [
-                            "+MainUnit"
-                        ]
-                    },
-                    "attributes":
-                    {
-                        "type": "object",
-                        "properties":
-                        {
-                            "unitNumber":
-                            {
-                                "type": "integer"
-                            },
-                            "numberOfBalcony":
-                            {
-                                "type": "integer"
-                            },
-                            "numberOfLivingRoom":
-                            {
-                                "type": "integer"
-                            },
-                            "numberOfOtherRoom":
-                            {
-                                "type": "integer"
-                            },
-                            "mainUnitID":
-                            {
-                                "type": "integer"
-                            }
-
-                        }
-                    },
-                    "geometry":
-                    {
-                        "type": "array",
-                        "items":
-                        {
-                            "oneOf": [
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/Solid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSolid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSolid"
-                                }
-                            ]
-                        }
-                    }
-                },
-                "required": [
-
-                    "type",
-                    "geometry",
-                    "parents"
-                ]
-            }
-        ]
-    },
-	
-	
-	"+SharedFacility":
-    {
-        "allOf": [
-            {
-                "$ref": "cityobjects.schema.json#/_AbstractCityObject"
-            },
-            {
-                "properties":
-                {
-                    "type":
-                    {
-                        "enum": [
-                            "+SharedFacility"
-                        ]
-                    },
-                    "attributes":
-                    {
-                        "type": "object",
-                        "properties":
-                        {
-                            "type":
-                            {
-                                "enum": [
-                                    "elevator",
-                                    "corridor",
-                                    "landing",
-                                    "entrance"
-
-                                ]
-                            },
-                            "sharedFacilityID":
-                            {
-                                "type": "integer"
-                            }
-
-                        }
-                    },
-                    "geometry":
-                    {
-                        "type": "array",
-                        "items":
-                        {
-                            "oneOf": [
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/Solid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSolid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSolid"
-                                }
-                            ]
-                        }
-                    }
-                },
-                "required": [
-
-                    "type",
-                    "geometry",
-                    "parents"
-                ]
-            }
-        ]
-    },
-	
-	
-	"+Annex":
-    {
-        "allOf": [
-            {
-                "$ref": "cityobjects.schema.json#/_AbstractCityObject"
-            },
-            {
-                "properties":
-                {
-                    "type":
-                    {
-                        "enum": [
-                            "+Annex"
-                        ]
-                    },
-                    "attributes":
-                    {
-                        "type": "object",
-                        "properties":
-                        {
-                            "type":
-                            {
-                                "enum": [
-                                    "waterTank",
-                                    "coalCellar",
-                                    "storage",
-                                    "garage"
-                                ]
-                            },
-
-                            "relatedUnitNumber":
-                            {
-                                "type": "integer"
-                            },
-                            "relatedUnitName":
-                            {
-                                "type": "string"
-                            },
-                            "annexID":
-                            {
-                                "type": "integer"
-                            }
-
-                        }
-                    },
-                    "geometry":
-                    {
-                        "type": "array",
-                        "items":
-                        {
-                            "oneOf": [
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/Solid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSolid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSolid"
-                                }
-                            ]
-                        }
-                    }
-                },
-                "required": [
-
-                    "type",
-                    "geometry",
-                    "parents"
-                ]
-            }
-        ]
-    },
-	
-	"+Restriction":
-    {
-        "allOf": [
-            {
-                "$ref": "cityobjects.schema.json#/_AbstractCityObject"
-            },
-            {
-                "properties":
-                {
-                    "type":
-                    {
-                        "enum": [
-                            "+Restriction"
-                        ]
-                    },
-                    "attributes":
-                    {
-                        "type": "object",
-                        "properties":
-                        {
-
-                            "benefitedLand":
-                            {
-                                "type": "string"
-                            },
-                            "burdenedLand":
-                            {
-                                "type": "string"
-                            }
-
-                        },
-                        "restrictionType":
+                        "type":
                         {
                             "enum": [
-                                "historical site",
-                                "mining",
-                                "wetland"
-
+                                "+CondominiumUnit"
                             ]
-                        }
-                    },
-                    "geometry":
-                    {
-                        "type": "array",
-                        "items":
+                        },
+                        "attributes":
                         {
-                            "oneOf": [
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiLineString"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/Solid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSolid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSolid"
-                                }
-                            ]
-                        }
-                    }
-                },
-                "required": [
-
-                    "type",
-                    "geometry"
-                ]
-            }
-        ]
-    },
-	
-	
-	"+Easement":
-    {
-        "allOf": [
-            {
-                "$ref": "cityobjects.schema.json#/_AbstractCityObject"
-            },
-            {
-                "properties":
-                {
-                    "type":
-                    {
-                        "enum": [
-                            "+Easement"
-                        ]
-                    },
-                    "attributes":
-                    {
-                        "type": "object",
-                        "properties":
-                        {
-
-                            "beneficiary":
+                            "type": "object",
+                            "properties":
                             {
-                                "type": "string"
+                                "dateOfSale":
+                                {
+                                    "type": "integer"
+                                },
+                                "marketValue":
+                                {
+                                    "type": "integer"
+                                },
+                                "name":
+                                {
+                                    "type": "string"
+                                },
+                                "unitID":
+                                {
+                                    "type": "integer"
+                                }
+
+                            }
+                        },
+                        "geometry":
+                        {
+                            "type": "array",
+                            "items":
+                            {
+                                "oneOf": [
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/Solid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSolid"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+
+                        "type",
+                        "geometry",
+                        "parents"
+                    ]
+                }
+            ]
+        },
+
+        "+MainUnit":
+        {
+            "allOf": [
+                {
+                    "$ref": "cityobjects.schema.json#/_AbstractCityObject"
+                },
+                {
+                    "properties":
+                    {
+                        "type":
+                        {
+                            "enum": [
+                                "+MainUnit"
+                            ]
+                        },
+                        "attributes":
+                        {
+                            "type": "object",
+                            "properties":
+                            {
+                                "unitNumber":
+                                {
+                                    "type": "integer"
+                                },
+                                "numberOfBalcony":
+                                {
+                                    "type": "integer"
+                                },
+                                "numberOfLivingRoom":
+                                {
+                                    "type": "integer"
+                                },
+                                "numberOfOtherRoom":
+                                {
+                                    "type": "integer"
+                                },
+                                "mainUnitID":
+                                {
+                                    "type": "integer"
+                                }
+
+                            }
+                        },
+                        "geometry":
+                        {
+                            "type": "array",
+                            "items":
+                            {
+                                "oneOf": [
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/Solid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSolid"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+
+                        "type",
+                        "geometry",
+                        "parents"
+                    ]
+                }
+            ]
+        },
+
+        "+SharedFacility":
+        {
+            "allOf": [
+                {
+                    "$ref": "cityobjects.schema.json#/_AbstractCityObject"
+                },
+                {
+                    "properties":
+                    {
+                        "type":
+                        {
+                            "enum": [
+                                "+SharedFacility"
+                            ]
+                        },
+                        "attributes":
+                        {
+                            "type": "object",
+                            "properties":
+                            {
+                                "type":
+                                {
+                                    "enum": [
+                                        "elevator",
+                                        "corridor",
+                                        "landing",
+                                        "entrance"
+
+                                    ]
+                                },
+                                "sharedFacilityID":
+                                {
+                                    "type": "integer"
+                                }
+
+                            }
+                        },
+                        "geometry":
+                        {
+                            "type": "array",
+                            "items":
+                            {
+                                "oneOf": [
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/Solid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSolid"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+
+                        "type",
+                        "geometry",
+                        "parents"
+                    ]
+                }
+            ]
+        },
+
+        "+Annex":
+        {
+            "allOf": [
+                {
+                    "$ref": "cityobjects.schema.json#/_AbstractCityObject"
+                },
+                {
+                    "properties":
+                    {
+                        "type":
+                        {
+                            "enum": [
+                                "+Annex"
+                            ]
+                        },
+                        "attributes":
+                        {
+                            "type": "object",
+                            "properties":
+                            {
+                                "type":
+                                {
+                                    "enum": [
+                                        "waterTank",
+                                        "coalCellar",
+                                        "storage",
+                                        "garage"
+                                    ]
+                                },
+
+                                "relatedUnitNumber":
+                                {
+                                    "type": "integer"
+                                },
+                                "relatedUnitName":
+                                {
+                                    "type": "string"
+                                },
+                                "annexID":
+                                {
+                                    "type": "integer"
+                                }
+
+                            }
+                        },
+                        "geometry":
+                        {
+                            "type": "array",
+                            "items":
+                            {
+                                "oneOf": [
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/Solid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSolid"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+
+                        "type",
+                        "geometry",
+                        "parents"
+                    ]
+                }
+            ]
+        },
+
+        "+Restriction":
+        {
+            "allOf": [
+                {
+                    "$ref": "cityobjects.schema.json#/_AbstractCityObject"
+                },
+                {
+                    "properties":
+                    {
+                        "type":
+                        {
+                            "enum": [
+                                "+Restriction"
+                            ]
+                        },
+                        "attributes":
+                        {
+                            "type": "object",
+                            "properties":
+                            {
+
+                                "benefitedLand":
+                                {
+                                    "type": "string"
+                                },
+                                "burdenedLand":
+                                {
+                                    "type": "string"
+                                }
+
                             },
-                            "easementtype":
+                            "restrictionType":
                             {
                                 "enum": [
-                                    "encumbering",
-                                    "appurtenant",
-                                    "encumberingRoad"
+                                    "historical site",
+                                    "mining",
+                                    "wetland"
 
                                 ]
                             }
-
-                        }
-                    },
-                    "geometry":
-                    {
-                        "type": "array",
-                        "items":
+                        },
+                        "geometry":
                         {
-                            "oneOf": [
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiLineString"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/Solid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSolid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSolid"
-                                }
-                            ]
-                        }
-                    }
-                },
-                "required": [
-
-                    "type",
-                    "geometry"
-                ]
-            }
-        ]
-    },
-	
-	"+DepthLimitation":
-    {
-        "allOf": [
-            {
-                "$ref": "cityobjects.schema.json#/_AbstractCityObject"
-            },
-            {
-                "properties":
-                {
-                    "type":
-                    {
-                        "enum": [
-                            "+DepthLimitation"
-                        ]
-                    },
-                    "attributes":
-                    {
-                        "type": "object",
-                        "properties":
-                        {
-
-                            "landApplied":
+                            "type": "array",
+                            "items":
                             {
-                                "type": "string"
-                            },
-                            "length":
-                            {
-                                "type": "number"
+                                "oneOf": [
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiLineString"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/Solid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSolid"
+                                    }
+                                ]
                             }
-
                         }
                     },
-                    "geometry":
-                    {
-                        "type": "array",
-                        "items":
-                        {
-                            "oneOf": [
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiLineString"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSurface"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/Solid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/CompositeSolid"
-                                },
-                                {
-                                    "$ref": "geomprimitives.schema.json#/MultiSolid"
-                                }
-                            ]
-                        }
-                    }
-                },
-                "required": [
+                    "required": [
 
-                    "type",
-                    "geometry"
-                ]
-            }
-        ]
-    }
-	
+                        "type",
+                        "geometry"
+                    ]
+                }
+            ]
+        },
+
+        "+Easement":
+        {
+            "allOf": [
+                {
+                    "$ref": "cityobjects.schema.json#/_AbstractCityObject"
+                },
+                {
+                    "properties":
+                    {
+                        "type":
+                        {
+                            "enum": [
+                                "+Easement"
+                            ]
+                        },
+                        "attributes":
+                        {
+                            "type": "object",
+                            "properties":
+                            {
+
+                                "beneficiary":
+                                {
+                                    "type": "string"
+                                },
+                                "easementtype":
+                                {
+                                    "enum": [
+                                        "encumbering",
+                                        "appurtenant",
+                                        "encumberingRoad"
+
+                                    ]
+                                }
+
+                            }
+                        },
+                        "geometry":
+                        {
+                            "type": "array",
+                            "items":
+                            {
+                                "oneOf": [
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiLineString"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/Solid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSolid"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+
+                        "type",
+                        "geometry"
+                    ]
+                }
+            ]
+        },
+
+        "+DepthLimitation":
+        {
+            "allOf": [
+                {
+                    "$ref": "cityobjects.schema.json#/_AbstractCityObject"
+                },
+                {
+                    "properties":
+                    {
+                        "type":
+                        {
+                            "enum": [
+                                "+DepthLimitation"
+                            ]
+                        },
+                        "attributes":
+                        {
+                            "type": "object",
+                            "properties":
+                            {
+
+                                "landApplied":
+                                {
+                                    "type": "string"
+                                },
+                                "length":
+                                {
+                                    "type": "number"
+                                }
+
+                            }
+                        },
+                        "geometry":
+                        {
+                            "type": "array",
+                            "items":
+                            {
+                                "oneOf": [
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiLineString"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/Solid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                                    },
+                                    {
+                                        "$ref": "geomprimitives.schema.json#/MultiSolid"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+
+                        "type",
+                        "geometry"
+                    ]
+                }
+            ]
+        }
+
     },
 
-    
-"extraRootProperties": {},    
-
-    
+    "extraRootProperties": {},
 
     "extraSemanticSurfaces":
     {
@@ -781,6 +774,10 @@
                 "type":
                 {
                     "enum": ["+ColumnSurface"]
+                },
+                "ownership":
+                {
+                    "type": "string"
                 }
 
             },
@@ -846,7 +843,7 @@
             "required": ["type"],
             "additionalProperties": false
         },
-		"+ProjectedSurface":
+        "+ProjectedSurface":
         {
             "type": "object",
             "properties":
@@ -860,7 +857,7 @@
             "required": ["type"],
             "additionalProperties": false
         },
-		"+SurveyedSurface":
+        "+SurveyedSurface":
         {
             "type": "object",
             "properties":
